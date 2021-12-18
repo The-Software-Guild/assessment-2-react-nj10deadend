@@ -7,8 +7,6 @@ const allGamesRouter = require('./routes/allGamesRouter');
 const gameFinderRouter = require('./routes/gameFinderRouter');
 const patchAndDeleteRouter = require('./routes/patchAndDeleteRouter');
 const cors = require('cors');
-
-
 app.use(cors());
 
 
@@ -49,3 +47,4 @@ app.listen(port, () => {
 })
 
 module.exports = app;
+// module.exports = favGames;

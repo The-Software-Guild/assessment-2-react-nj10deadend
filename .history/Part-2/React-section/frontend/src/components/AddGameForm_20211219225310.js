@@ -50,7 +50,7 @@ function AddGameForm ({setGameData}) {
 
     return (
         <div>
-            <Button className="bttns" variant="contained" onClick={() => {setClicked(!clicked)}}>{buttonText}</Button>
+            <Button variant="contained" onClick={() => {setClicked(!clicked)}}>{buttonText}</Button>
             {clicked && (
                 <form onSubmit={onSubmit}>
                 <div>

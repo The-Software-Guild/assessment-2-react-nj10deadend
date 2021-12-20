@@ -23,9 +23,9 @@ let newSquare = new Square(4, 4, 4, 4);
 let newQuadrilateral = new Square(4, 18, 9, 6);
 let abnormalShape = new Square(0, 15, 9999, 2);
 let oneFlawSquare = new Square(10, 10, 10, -10);
+// console.log(newSquare)
 
 
 console.log(newSquare.isSquare());
 console.log(newQuadrilateral.isSquare());
 console.log(abnormalShape.isSquare());
-console.log(oneFlawSquare.isSquare());

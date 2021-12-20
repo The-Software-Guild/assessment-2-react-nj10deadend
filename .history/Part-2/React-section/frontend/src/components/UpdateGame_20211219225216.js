@@ -17,7 +17,7 @@ function UpdateGame ({getFetchGameServer}) {
     const [clicked, setClicked] = useState(false);
     const [searchId, setSearchId] = useState("");
 
-    const updateButtonText = clicked ? "Hide Update Form" : "Click to Update a Game"
+    const updateButtonText = clicked ? "Hide Update Form" : "Update game details"
 
     async function patchRequest () {
         await axios.patch(`http://localhost:8080/allGames/update/${searchId}`,  {
@@ -41,7 +41,7 @@ function UpdateGame ({getFetchGameServer}) {
     }
     return (
         <Box sx={{ borderRadius: '50%' }}>
-            <Button className="bttns"variant="contained" onClick={() => {setClicked(!clicked)}}>{updateButtonText}</Button>
+            <Button variant="contained" onClick={() => {setClicked(!clicked)}}>{updateButtonText}</Button>
             {clicked && (
                 <div>
                     <br></br>

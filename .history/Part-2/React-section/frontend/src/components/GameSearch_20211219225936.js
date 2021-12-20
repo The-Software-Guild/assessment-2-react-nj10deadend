@@ -26,7 +26,7 @@ function GameSearch ({setGameData}) {
 
     return (
         <div>
-            <Button className="bttns" variant="contained" onClick={() => {setClicked(!clicked)}}>{searchGameText}</Button>
+            <Button variant="contained" onClick={() => {setClicked(!clicked)}}>{searchGameText}</Button>
             {clicked && (
                 <form onSubmit={onSearch}>
                     <br></br>

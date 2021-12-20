@@ -40,7 +40,7 @@ function App() {
       <AddGameForm setGameData={setGameData}/>
       <br></br>
 
-      <br></br>
+      <Typography variant="h3" component="Box" gutterBottom>My Favorite Games</Typography>
 
 
       <Home gameData={gameData}/>

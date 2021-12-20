@@ -25,7 +25,7 @@ function DeleteGame ({getFetchGameServer}) {
     }
     return (
         <div>
-            <Button className="bttns" variant="outlined" color="error" onClick={() => {setClicked(!clicked)}}>{deleteText}</Button>
+            <Button variant="outlined" color="error" onClick={() => {setClicked(!clicked)}}>{deleteText}</Button>
             {clicked && (
                 <form onSubmit={onSubmit}>
                     <br></br>

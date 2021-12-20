@@ -40,8 +40,6 @@ function App() {
       <AddGameForm setGameData={setGameData}/>
       <br></br>
 
-      <br></br>
-
 
       <Home gameData={gameData}/>
 

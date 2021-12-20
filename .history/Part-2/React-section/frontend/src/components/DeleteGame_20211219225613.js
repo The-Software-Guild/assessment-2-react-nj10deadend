@@ -10,7 +10,7 @@ function DeleteGame ({getFetchGameServer}) {
     const [searchId, setSearchId] = useState("");
     const [clicked, setClicked] = useState(false);
 
-    const deleteText = clicked ? "Hide Delete Form" : "Click to Delete A Game"
+    const deleteText = clicked ? "Hide Delete Form" : "Delete A Game"
 
     async function deleteGame () {
         await axios.delete(`http://localhost:8080/allGames/delete/${searchId}`)
@@ -25,7 +25,7 @@ function DeleteGame ({getFetchGameServer}) {
     }
     return (
         <div>
-            <Button className="bttns" variant="outlined" color="error" onClick={() => {setClicked(!clicked)}}>{deleteText}</Button>
+            <Button variant="outlined" color="error" onClick={() => {setClicked(!clicked)}}>{deleteText}</Button>
             {clicked && (
                 <form onSubmit={onSubmit}>
                     <br></br>

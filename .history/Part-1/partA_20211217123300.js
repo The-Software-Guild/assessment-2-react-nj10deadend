@@ -24,4 +24,4 @@ function testStrickEquals(strickEquals) {
     console.log(strickEquals({}, []));
 
 }
-testStrickEquals(strickEquals);
+// testStrickEquals(strickEquals);

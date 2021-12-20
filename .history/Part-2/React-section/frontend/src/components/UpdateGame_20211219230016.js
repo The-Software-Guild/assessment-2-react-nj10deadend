@@ -41,7 +41,7 @@ function UpdateGame ({getFetchGameServer}) {
     }
     return (
         <Box sx={{ borderRadius: '50%' }}>
-            <Button className="bttns"variant="contained" onClick={() => {setClicked(!clicked)}}>{updateButtonText}</Button>
+            <Button variant="contained" onClick={() => {setClicked(!clicked)}}>{updateButtonText}</Button>
             {clicked && (
                 <div>
                     <br></br>

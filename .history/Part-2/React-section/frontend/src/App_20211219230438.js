@@ -40,6 +40,8 @@ function App() {
       <AddGameForm setGameData={setGameData}/>
       <br></br>
 
+      <Typography variant="h3" component="Box">My Favorite Games</Typography>
+
       <br></br>
 
 

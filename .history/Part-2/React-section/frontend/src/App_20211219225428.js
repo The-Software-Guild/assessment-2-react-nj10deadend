@@ -7,10 +7,10 @@ import DeleteGame from './components/DeleteGame';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
 
 // import {Container} from '@mui/material';
 import Button from '@mui/material/Button';
+// import Typography from '@mui/material/Typography';
 
 function App() {
 
@@ -28,19 +28,15 @@ function App() {
 
   return (
     <Container fluid className="App">
-      
 
       <Button variant="outlined"onClick={getFetchGameServer}>Back to Original List</Button>
-      <GameSearch setGameData={setGameData}/>
-      <br></br>
       <UpdateGame getFetchGameServer={getFetchGameServer}/>
       <br></br>
       <DeleteGame getFetchGameServer={getFetchGameServer} />
       <br></br>
+      <GameSearch setGameData={setGameData}/>
+      <br></br>
       <AddGameForm setGameData={setGameData}/>
-      <br></br>
-
-      <br></br>
 
 
       <Home gameData={gameData}/>

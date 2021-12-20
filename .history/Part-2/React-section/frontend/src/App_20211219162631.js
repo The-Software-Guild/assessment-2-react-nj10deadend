@@ -30,7 +30,7 @@ function App() {
     // <div className="App">
     <Container className="App">
 
-      <Button variant="outlined"onClick={getFetchGameServer}>Back to Original List</Button>
+      <Button onClick={getFetchGameServer}>Back to Original List</Button>
       <UpdateGame getFetchGameServer={getFetchGameServer}/>
       <br></br>
       <DeleteGame getFetchGameServer={getFetchGameServer} />

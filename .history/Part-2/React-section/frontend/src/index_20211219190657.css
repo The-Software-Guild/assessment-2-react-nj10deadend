@@ -15,7 +15,6 @@ code {
 .imgs {
   height: 300px;
   width: 300px;
-  border-radius: 5px;
 }
 .game-cards {
   border-color: lightblue;
@@ -23,40 +22,4 @@ code {
 }
 .divider {
   border-top: 1px dotted lightblue;
-}
-/* .input-fields {
-  height: 10px;
-  width: 200px;
-} */
-#outlined-basic1 {
-  height: 7px;
-  width: 200px;
-}
-#outlined-basic2 {
-  height: 7px;
-  width: 200px;
-}
-#outlined-basic3 {
-  height: 7px;
-  width: 200px;
-}
-#outlined-basic4 {
-  height: 7px;
-  width: 200px;
-}
-#outlined-basic5 {
-  height: 7px;
-  width: 200px;
-}
-#outlined-basic6 {
-  height: 7px;
-  width: 200px;
-}
-#outlined-basic7 {
-  height: 7px;
-  width: 200px;
-}
-#outlined-basic8 {
-  height: 7px;
-  width: 200px;
 }

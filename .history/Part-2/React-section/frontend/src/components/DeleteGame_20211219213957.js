@@ -30,7 +30,7 @@ function DeleteGame ({getFetchGameServer}) {
                 <form onSubmit={onSubmit}>
                     <br></br>
                     <div>
-                    <TextField id="outlined-basic" label="Enter ID of Game you want Deleted" 
+                    <TextField id="outlined-basic" label="Delete game by its ID" 
                     variant="outlined" 
                     onChange={(event) => {setSearchId(event.target.value)}} 
                     value = {searchId}

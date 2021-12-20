@@ -28,15 +28,13 @@ function DeleteGame ({getFetchGameServer}) {
             <Button variant="outlined" color="error" onClick={() => {setClicked(!clicked)}}>{deleteText}</Button>
             {clicked && (
                 <form onSubmit={onSubmit}>
-                    <br></br>
                     <div>
-                    <TextField id="outlined-basic" label="Enter ID of Game you want Deleted" 
+                    <TextField id="outlined-basic" label="Delete game by its ID" 
                     variant="outlined" 
                     onChange={(event) => {setSearchId(event.target.value)}} 
                     value = {searchId}
                     />
                     </div>
-                    <br></br>
                     <div>
                         <Button type="submit" variant="outlined" color="error" startIcon={<DeleteIcon />}>Delete Game</Button>
                     </div>

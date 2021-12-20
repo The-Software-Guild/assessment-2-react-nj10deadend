@@ -55,6 +55,16 @@ function AddGameForm ({setGameData}) {
             {clicked && (
                 <form onSubmit={onSubmit}>
                 <div>
+                    <label for="game-id">Game ID</label>
+                    <br></br>
+                    <br></br>
+                    <TextField id="outlined-basic1" label="Enter ID of Game you want to update" 
+                    variant="outlined" 
+                    onChange={(event) => {setSearchId(event.target.value)}} 
+                    value = {searchId}
+                    />
+                </div>
+                <div>
                     <label for="name">Name</label>
                     <br></br>
                     <br></br>

@@ -10,7 +10,7 @@ function GameCards ({eachGame}) {
         <Box className="game-cards" onClick={(event) => console.log(event.target)}>
             <Typography variant="h2" component="h2" gutterBottom>{eachGame.name}</Typography>
             <hr className="divider"></hr>
-            <img className="imgs" src={eachGame.img} alt={eachGame.name} />
+            <Image sx={{ width: 300, height: 300}} src={eachGame.img} alt={eachGame.name} />
             <Typography variant="p" component="p" gutterBottom>Cross-Platform: {eachGame.cross_platform.toString()}</Typography>
             <Typography variant="p" component="p" gutterBottom>Price: $ {eachGame.price}</Typography>
             <Typography variant="p" component="p" gutterBottom>

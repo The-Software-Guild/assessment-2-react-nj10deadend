@@ -35,13 +35,11 @@ function GameSearch ({setGameData}) {
                     onChange={(event) => {setSearchId(event.target.value)}} 
                     value = {searchId}
                     /> */}
-                    <br></br>
                     <TextField id="outlined-basic" label="Search for game by id" 
                     variant="outlined" 
                     onChange={(event) => {setSearchId(event.target.value)}} 
                     value = {searchId}
                     />
-                    <br></br>
                     <Button variant="outlined" type="submit">Search</Button>
                 </form>
             )}

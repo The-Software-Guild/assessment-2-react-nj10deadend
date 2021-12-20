@@ -2,9 +2,11 @@ import {useState} from 'react';
 import axios from 'axios';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import SendIcon from '@mui/icons-material/Send';
+// import TextField from '@mui/material/TextField';
 
+
+
+import SendIcon from '@mui/icons-material/Send';
 
 
 function UpdateGame ({getFetchGameServer}) {
@@ -44,14 +46,11 @@ function UpdateGame ({getFetchGameServer}) {
             <Button variant="contained" onClick={() => {setClicked(!clicked)}}>{updateButtonText}</Button>
                 {clicked && (
                     <div>
-                        <br></br>
                         <form onSubmit={updateChanges}>
                             <div>
                                 <label for="game-id">Game ID</label>
                                 <br></br>
-                                <br></br>
-                                <TextField id="outlined-basic1" label="Enter ID of Game you want to update" 
-                                variant="outlined" 
+                                <input name="game-id" type="text" placeholder="Enter Game ID" 
                                 onChange={(event) => {setSearchId(event.target.value)}} 
                                 value = {searchId}
                                 />
@@ -59,67 +58,38 @@ function UpdateGame ({getFetchGameServer}) {
                             <div>
                                 <label for="name">Name</label>
                                 <br></br>
-                                <br></br>
-                                <TextField id="outlined-basic2" label="Enter name" 
-                                variant="outlined" 
-                                onChange={(event) => {setName(event.target.value)}} 
-                                value = {name}
-                                />
+                                <input type="text" name="name" placeholder="Enter name" id="name" 
+                                value={name} onChange={(event) => {setName(event.target.value)}}/>
                             </div>
                             <div>
                                 <label for="img">Image Url</label>
                                 <br></br>
-                                <br></br>
-                                <TextField id="outlined-basic3" label="Enter Image URL" 
-                                variant="outlined" 
-                                onChange={(event) => {setImg(event.target.value)}} 
-                                value = {img}
-                                />
+                                <input type="text" name="img" placeholder="Enter image URL" id="img" 
+                                value={img} onChange={(event) => {setImg(event.target.value)}}/>
                             </div>
                             <div>
                                 <label for="cross platform">Cross Platform</label>
                                 <br></br>
-                                <br></br>
-                                <TextField id="outlined-basic4" label="Enter True or False" 
-                                variant="outlined" 
-                                onChange={(event) => {setCrossPlatform(event.target.value)}} 
-                                value = {crossPlatform}
-                                />
+                                <input type="text" name="cross platform" placeholder="Enter true or false" id="cross_platform" 
+                                value={crossPlatform} onChange={(event) => {setCrossPlatform(event.target.value)}}/>
                             </div>
                             <div>
                                 <label for="price">Price</label>
                                 <br></br>
-                                <br></br>
-                                <TextField id="outlined-basic5" label="Enter price of game" 
-                                variant="outlined" 
-                                onChange={(event) => {setPrice(event.target.value)}} 
-                                value = {price}
-                                />
+                                <input type="text" name="price" placeholder="Enter price of game" id="price" 
+                                value={price} onChange={(event) => {setPrice(event.target.value)}} />
                             </div>
                             <div>
                                 <label for="genres">Genres</label>
                                 <br></br>
+                                <input type="text" name="genre1" placeholder="Enter first genre category" id="genre1" 
+                                value={genres[0]} onChange={(event) => {setGenres([event.target.value, genres[1], genres[2]])}}/>
                                 <br></br>
-                                <TextField id="outlined-basic6" label="Enter first genre category" 
-                                variant="outlined" 
-                                onChange={(event) => {setGenres([event.target.value, genres[1], genres[2]])}} 
-                                value = {genres[0]}
-                                />
+                                <input type="text" name="genre2" placeholder="Enter second genre category" id="genre2" 
+                                value={genres[1]} onChange={(event) => {setGenres([genres[0], event.target.value, genres[2] ])}}/>
                                 <br></br>
-                                <br></br>
-                                <TextField id="outlined-basic7" label="Enter second genre category" 
-                                variant="outlined" 
-                                onChange={(event) => {setGenres([genres[0], event.target.value, genres[2] ])}} 
-                                value = {genres[1]}
-                                />
-                                <br></br>
-                                <br></br>
-                                <TextField id="outlined-basic8" label="Enter third genre category" 
-                                variant="outlined" 
-                                onChange={(event) => {setGenres([genres[0], genres[1], event.target.value])}} 
-                                value = {genres[2]}
-                                />
-                                
+                                <input type="text" name="genre3" placeholder="Enter third genre category" id="genre3" 
+                                value={genres[2]} onChange={(event) => {setGenres([genres[0], genres[1], event.target.value])}}/>
                             </div>
                             <Button variant="contained" endIcon={<SendIcon />} type="submit">Submit Changes</Button>
 

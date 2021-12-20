@@ -2,8 +2,6 @@ import axios from 'axios';
 import {useState} from 'react';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
-import TextField from '@mui/material/TextField';
-
 
 function DeleteGame ({getFetchGameServer}) {
 
@@ -28,17 +26,14 @@ function DeleteGame ({getFetchGameServer}) {
             <Button variant="outlined" color="error" onClick={() => {setClicked(!clicked)}}>{deleteText}</Button>
             {clicked && (
                 <form onSubmit={onSubmit}>
-                    <br></br>
                     <div>
-                    <TextField id="outlined-basic" label="Enter ID of Game you want Deleted" 
-                    variant="outlined" 
-                    onChange={(event) => {setSearchId(event.target.value)}} 
-                    value = {searchId}
-                    />
+                        <input name="game-id" type="text" placeholder="Enter Game ID" 
+                        onChange={(event) => {setSearchId(event.target.value)}} 
+                        value = {searchId}
+                        />
                     </div>
-                    <br></br>
                     <div>
-                        <Button type="submit" variant="outlined" color="error" startIcon={<DeleteIcon />}>Delete Game</Button>
+                        <Button type="submit" variant="outlined" startIcon={<DeleteIcon />}>Delete Game</Button>
                     </div>
                 </form>
             )}

@@ -1,9 +1,5 @@
 import {useState} from 'react';
 import axios from 'axios';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-
-
 
 function GameSearch ({setGameData}) {
 
@@ -31,18 +27,11 @@ function GameSearch ({setGameData}) {
             <Button variant="contained" onClick={() => {setClicked(!clicked)}}>{searchGameText}</Button>
             {clicked && (
                 <form onSubmit={onSearch}>
-                    {/* <input type="text" placeholder="Search for game by id..." 
-                    onChange={(event) => {setSearchId(event.target.value)}} 
-                    value = {searchId}
-                    /> */}
-                    <br></br>
-                    <TextField id="outlined-basic" label="Search for game by id" 
-                    variant="outlined" 
+                    <input type="text" placeholder="Search for game by id..." 
                     onChange={(event) => {setSearchId(event.target.value)}} 
                     value = {searchId}
                     />
-                    <br></br>
-                    <Button variant="outlined" type="submit">Search</Button>
+                    <input type="submit" value="Submit" />
                 </form>
             )}
         </div>
